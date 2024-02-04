@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment for practice</title>
+    <script>
+        function change(){
+            const msg ="Welcome";
+            document.getElementById("text").innerHTML=msg;
+
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="root">Not rendered</div>
+    <h1 id="text">Hello World</h1>
+    <button onclick="change()">change</button>
+
+      <!-- Injectd React and ReactDOM using CDN -->
+      <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+
+    <script>
+        const msg=React.createElement(
+            'h1',{
+                id:"msg"
+            },
+            "Hello Kalyani"
+        )
+
+        const root=ReactDOM.createRoot(
+           document.getElementById('root')
+        )
+
+        root.render(msg)
+
+    </script>
+</body>
+</html>
